@@ -27,12 +27,12 @@
             width: 75%;
         }
     </style>
-    <title>Dokument Aussen</title>
+    <title>Dokument A</title>
 </head>
 
 <body>
-    <h1>Dokument Aussen</h1>
-    <p>Hörspiel Aussen für den Vortrag am 18.09.2021.</p>
+    <h1>Dokument A</h1>
+    <p>Hörspiel A für die Präsentation</p>
     <audio id="player" controls preload="auto">
         Your browser does not support the audio tag.
     </audio>
@@ -48,6 +48,8 @@
         const onLoad = () => {
             playerElement.src = audioFiles[0];
         }
+
+        playerElement.oncanplaythrough = (e) => (console.log("can play through"));
 
         window.addEventListener('load', onLoad);
     </script>
