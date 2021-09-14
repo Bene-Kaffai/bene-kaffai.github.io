@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            height: 100%;
+            margin: 0px;
+        }
+
+        body {
+            min-height: 100%;
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 10%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            background-color: darkgoldenrod;
+        }
+
+        #player {
+            width: 75%;
+        }
+    </style>
+    <title>Dokument A</title>
+</head>
+
+<body>
+    <h1>Dokument A</h1>
+    <p>Hörspiel A für den Vortrag am 18.09.2021.</p>
+    <audio id="player" controls preload="auto">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        const playerElement = document.getElementById('player');
+
+        const audioFiles = [
+            "A.mp3",
+            "http://www.teanglann.ie/CanC/nua.mp3",
+        ];
+
+        const onLoad = () => {
+            playerElement.src = audioFiles[0];
+        }
+
+        window.addEventListener('load', onLoad);
+    </script>
+</body>
+
+</html>
